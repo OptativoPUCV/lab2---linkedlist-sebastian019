@@ -29,15 +29,24 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-     return NULL;
+  List* local =(List*) malloc (sizeof(List));
+  local -> head = NULL;
+  local -> tail = NULL;
+  local -> current = NULL;
+  
+  return local;
 }
 
 void * firstList(List * list) {
-    return NULL;
+  list -> current = list -> head;
+  
+  return list -> current -> data;
 }
 
 void * nextList(List * list) {
-    return NULL;
+  list -> current = list -> current -> next;
+  
+  return list -> current -> data;
 }
 
 void * lastList(List * list) {
