@@ -40,7 +40,7 @@ List * createList() {
 void * firstList(List * list) {
   list -> current = list -> head;
   
-  return list -> head -> next;
+  return list -> head -> data;
 }
 
 void * nextList(List * list) {
