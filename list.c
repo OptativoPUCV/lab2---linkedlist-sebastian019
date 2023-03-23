@@ -40,7 +40,7 @@ List * createList() {
 void * firstList(List * list) {
   list -> current = list -> head;
   
-  return NULL; //list -> head -> data; core dumped
+  return NULL; //list -> head -> data;
 }
 
 void * nextList(List * list) {
@@ -50,7 +50,9 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+  list -> current = list -> current -> next;
+  
+  return list -> tail -> data;
 }
 
 void * prevList(List * list) {
