@@ -142,7 +142,7 @@ void * popCurrent(List * list) {
     return NULL;
   }
   
-  Node *aux = list -> tail;
+  Node *aux = list -> current;
   void *dato  = aux -> data;
 
   if(aux -> prev != NULL){
