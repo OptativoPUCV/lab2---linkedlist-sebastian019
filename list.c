@@ -46,7 +46,7 @@ void * firstList(List * list) {
 void * nextList(List * list) {
   list -> current = list -> current -> next;
   
-  return list -> next -> data;
+  return list -> head -> data;
 }
 
 void * lastList(List * list) {
@@ -62,11 +62,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  Node * nuevoNodo = (Node *) malloc(sizeof(Node));
-
-  nuevoNodo -> data = data;
-  nuevoNodo -> prev = NULL;
-  nuevoNodo -> next = list -> head;
+  Node* nuevoNode = createNode(&data)
 
   list -> tail = nuevoNodo;
 }

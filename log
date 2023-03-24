@@ -171,3 +171,17 @@ list.c:50:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 4248832
+Fri 24 Mar 2023 11:24:54 AM UTC: 
+ list.c | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:3: error: expected ‘,’ or ‘;’ before ‘list’
+   67 |   list -> tail = nuevoNodo;
+      |   ^~~~
+list.c:65:9: error: unused variable ‘nuevoNode’ [-Werror=unused-variable]
+   65 |   Node* nuevoNode = createNode(&data)
+      |         ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ebffb12
