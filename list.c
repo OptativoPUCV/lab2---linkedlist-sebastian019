@@ -105,13 +105,10 @@ void pushCurrent(List * list, void * data) {
   if(list -> current -> next == NULL){
     return;
   }
-  if(list -> head == NULL){
-    pushFront(list, list -> head -> data);
-  }
   else{
     nuevoNodo -> prev = list -> current;
-  list -> current -> next = nuevoNodo;
-  list -> tail = nuevoNodo;
+    list -> current -> next = nuevoNodo;
+    list -> tail = nuevoNodo;
   }
   
 }
