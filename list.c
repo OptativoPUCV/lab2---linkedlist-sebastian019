@@ -142,7 +142,7 @@ void * popCurrent(List * list) {
     return NULL;
   }
   
-  Node *aux = list -> current;
+  Node *aux = list -> tail;
   void *dato  = aux -> data;
 
   if(aux -> prev != NULL){
@@ -153,7 +153,6 @@ void * popCurrent(List * list) {
   }
   if(aux -> next != NULL){
     aux -> next -> prev = aux -> prev;
-    list -> tail = aux;
   }
   
   return dato;
