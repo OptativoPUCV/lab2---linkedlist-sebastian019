@@ -391,3 +391,18 @@ Fri 24 Mar 2023 02:49:06 PM UTC:
  tests:  10|2
 total_score: 45/70
 551277b
+Fri 24 Mar 2023 08:20:52 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:146:10: error: ‘data’ undeclared (first use in this function)
+  146 |   return data;
+      |          ^~~~
+list.c:146:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:147:1: error: control reaches end of non-void function [-Werror=return-type]
+  147 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4829126
