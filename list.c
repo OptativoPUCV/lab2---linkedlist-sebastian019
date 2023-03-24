@@ -154,7 +154,8 @@ void * popCurrent(List * list) {
   if(aux -> next != NULL){
     aux -> next -> prev = aux -> prev;
   }
-  
+
+  list -> tail = aux -> next;
   return dato;
 }
 
