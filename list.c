@@ -105,7 +105,7 @@ void pushCurrent(List * list, void * data) {
   if(list -> current == NULL){
     return;
   }
-  Node *nodoTemp = list -> current -> next;
+  //Node *nodoTemp = list -> current -> next;
   if(list->current->next == NULL){
     return;
   }
