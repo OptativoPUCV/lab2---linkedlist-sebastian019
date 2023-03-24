@@ -151,6 +151,7 @@ void * popCurrent(List * list) {
     aux -> next -> prev = aux -> prev;
   }
   list -> current = aux -> next;
+  free(aux);
   return dato;
 }
 
