@@ -375,3 +375,13 @@ Fri 24 Mar 2023 02:40:28 PM UTC:
  tests:  10|2
 total_score: 45/70
 89b0610
+Fri 24 Mar 2023 02:47:46 PM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:112:3: error: ‘else’ without a previous ‘if’
+  112 |   else{
+      |   ^~~~
+Compilation failed
+cd8859d
