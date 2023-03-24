@@ -154,6 +154,10 @@ void * popCurrent(List * list) {
   if(aux -> next != NULL){
     aux -> next -> prev = aux -> prev;
   }
+  if(aux == list -> tail){
+    list -> tail = aux;
+    list -> tail -> prev = aux -> next; 
+  }
 
   list -> tail = aux -> next;
   return dato;
