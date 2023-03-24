@@ -150,8 +150,14 @@ void * popCurrent(List * list) {
   else{
     aux -> next -> prev = aux -> prev;
   }
+  if(aux == list -> tail){
+    list -> tail = aux -> prev;
+  }
+  else{
+    aux -> next -> prev = aux -> prev;
+  }
   list -> current = aux -> next;
-  free(aux);
+  
   return dato;
 }
 
