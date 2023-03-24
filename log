@@ -385,3 +385,9 @@ list.c:112:3: error: ‘else’ without a previous ‘if’
       |   ^~~~
 Compilation failed
 cd8859d
+Fri 24 Mar 2023 02:49:06 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  10|2
+total_score: 45/70
+551277b
