@@ -141,9 +141,17 @@ void * popCurrent(List * list) {
   if(list -> current -> next == NULL){
     return NULL;
   }
-  Node *aux = list -> head;
-  aux -> next = list -> current -> next;
-  return data;
+  Node *aux = list -> current;
+  void *dato  = aux -> data;
+
+  if (aux == list -> head){
+    list -> head = aux -> next;
+  }
+  else{
+    aux -> next -> prev = aux -> prev;
+  }
+  list -> current = aux -> next;
+  return dato;
 }
 
 void cleanList(List * list) {
