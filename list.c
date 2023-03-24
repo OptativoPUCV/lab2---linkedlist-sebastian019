@@ -102,15 +102,14 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
   Node* nuevoNodo = createNode(data);
-  if(list -> current -> next == NULL){
-    return;
+  if(list -> head == NULL){
+    pushFront(lista,lista -> head -> data);
   }
   else{
     nuevoNodo -> prev = list -> current;
     list -> current -> next = nuevoNodo;
     list -> tail = nuevoNodo;
   }
-  
 }
 
 void * popFront(List * list) {
