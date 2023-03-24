@@ -185,3 +185,19 @@ list.c:65:9: error: unused variable ‘nuevoNode’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ebffb12
+Fri 24 Mar 2023 11:24:57 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:18: error: ‘nuevoNodo’ undeclared (first use in this function); did you mean ‘nuevoNode’?
+   67 |   list -> tail = nuevoNodo;
+      |                  ^~~~~~~~~
+      |                  nuevoNode
+list.c:67:18: note: each undeclared identifier is reported only once for each function it appears in
+list.c:65:9: error: unused variable ‘nuevoNode’ [-Werror=unused-variable]
+   65 |   Node* nuevoNode = createNode(&data);
+      |         ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+829a4a0

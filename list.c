@@ -62,7 +62,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  Node* nuevoNode = createNode(&data)
+  Node* nuevoNode = createNode(&data);
 
   list -> tail = nuevoNodo;
 }
