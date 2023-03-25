@@ -531,3 +531,15 @@ Sat 25 Mar 2023 12:08:43 AM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 cac2017
+Sat 25 Mar 2023 12:09:08 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:106:20: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  106 |     pushFront(list,lista -> head -> data);
+      |                    ^~~~~
+      |                    list
+list.c:106:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c0ac15d
