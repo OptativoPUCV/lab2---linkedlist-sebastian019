@@ -567,3 +567,14 @@ Sat 25 Mar 2023 10:51:15 PM UTC:
  tests:  11|1
 total_score: 55/70
 dd7c49a
+Sat 25 Mar 2023 10:58:05 PM UTC: 
+ list.c | 20 ++++++++------------
+ 1 file changed, 8 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:140:11: error: unused variable ‘prev2’ [-Werror=unused-variable]
+  140 |     Node *prev2 = list -> head;
+      |           ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5f8c4f4
