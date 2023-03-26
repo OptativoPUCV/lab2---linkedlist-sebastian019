@@ -133,22 +133,12 @@ void * popCurrent(List * list) {
   Node *aux = list -> current;
   void *dato  = aux -> data;
 
-  if(aux -> prev != NULL){
-    aux  -> prev -> next = aux -> next;
-  }
-  else{
-    list -> head = aux -> next;
-  }
-  if(aux -> next != NULL){
-    aux -> next -> prev = aux -> prev;
-  }
-  if(aux == list -> tail){
-    list -> tail = aux;
-    list -> tail -> prev = aux -> next; 
+  if(aux == list -> head){
+    list -> head = list -> head -> next;
+    list -> head = NULL;
   }
 
-  list -> tail = aux -> prev;
-  list -> tail -> next = NULL;
+  list -> current = list -> current -> next; 
   return dato;
 }
 
